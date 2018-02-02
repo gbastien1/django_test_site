@@ -1,0 +1,29 @@
+{% load staticfiles %}
+{% load static %}
+{% load compress %}
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Food | A website about food</title>           
+    {% if debug %}
+        {# This is the client-side way to compile less and an ok choice for local dev. #}
+        <link href="{% static 'less/style.less' %}" media="all" rel="stylesheet/less" type="text/css"/>
+        <script src="{% static 'js/lib/less.min.js' %}"></script>
+    {% else %} 
+        {# This is the nifty django-compressor way to compile your less files in css. #}
+        {% compress css %}
+            <link href="{% static 'less/style.less' %}" media="all" rel="stylesheet" type="text/less"/>
+        {% endcompress %}
+    {% endif %}
+ 
+</head>
+<body>
+    {% include "modules/header.html" %}
+    
+    {% block content %}
+    {% endblock %}
+
+    {% include "modules/footer.html" %}
+</body>
+</html>

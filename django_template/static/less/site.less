@@ -1,0 +1,22 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	font-family: arial, helvetica, sans-serif;
+}
+
+.site-centerer {
+	width: @site-max-width;
+	margin: 0 auto;
+	padding-left: 15px;
+	padding-right: 15px;
+	box-sizing: border-box;
+
+	@media screen and (max-width: @site-max-width) {
+		width: 100%;
+	}
+}

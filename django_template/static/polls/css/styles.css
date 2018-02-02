@@ -1,0 +1,10 @@
+body {
+    background-image: url('../images/background.png');
+}
+
+li, a {
+    color: pink;
+}
+a:visited, a:active {
+    color: goldenrod;
+}

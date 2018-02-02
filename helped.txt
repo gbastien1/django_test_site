@@ -1,0 +1,1 @@
+https://stackoverflow.com/questions/22841764/best-practice-for-django-project-working-directory-structure

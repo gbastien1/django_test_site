@@ -1,0 +1,14 @@
+{% load static %}
+
+<header class="site-header">
+    <div class="site-header-inner site-centerer">
+        <div class="logo-ctn">
+            <img src="{% static 'img/logo.png' %}" alt="Food"/>
+        </div>
+        <nav class="site-nav">
+            <a class="site-nav-link" href="{% url 'pages:about' %}">About</a>
+            <a class="site-nav-link" href="{% url 'pages:contact' %}">Contact</a>
+            <a class="site-nav-link" href="{% url 'catalog:index' %}">Catalog</a>
+        </nav>
+    </div>
+</header>

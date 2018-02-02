@@ -1,0 +1,14 @@
+{
+  "name": "assets",
+  "version": "1.0.0",
+  "description": "Assets for a django boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gabrielle Bastien",
+  "license": "ISC",
+  "dependencies": {
+    "less": "^2.7.3"
+  }
+}
