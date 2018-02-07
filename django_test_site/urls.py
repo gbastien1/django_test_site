@@ -1,4 +1,4 @@
-"""django_template URL Configuration
+"""django_test_site URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.0/topics/http/urls/
@@ -17,8 +17,8 @@ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
-    path('', include('django_template.apps.pages.urls')),
-    path('polls/', include('django_template.apps.polls.urls')),
-    path('catalog/', include('django_template.apps.catalog.urls')),
+    path('', include('django_test_site.apps.pages.urls')),
+    path('polls/', include('django_test_site.apps.polls.urls')),
+    path('catalog/', include('django_test_site.apps.catalog.urls')),
     path('admin/', admin.site.urls),
 ]

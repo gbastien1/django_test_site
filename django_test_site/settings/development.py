@@ -1,4 +1,4 @@
-from django_template.settings.production import *
+from django_test_site.settings.production import *
 
 TMP_PATH = os.path.abspath(os.path.join(PROJECT_ROOT, 'tmp'))
 
