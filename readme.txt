@@ -1,0 +1,5 @@
+*README*
+
+pip install rcssmin --install-option="--without-c-extensions"
+pip install rjsmin --install-option="--without-c-extensions"
+pip install django-compressor --upgrade
