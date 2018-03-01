@@ -1,7 +1,54 @@
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+	line-height: 1.2;
+	font-family: @heading-font;
+	margin: 0;
+	
+	&:not(:last-child) {
+		margin-bottom: 15px;
+	}
+}
+h1 {
+	font-size: 4rem;
+	text-transform: uppercase;
+}
+h2 {
+	font-size: 3.5rem;
+}
 p, li, a {
 	font-size: 1.6rem;
-	line-height: 2.4rem;
+	line-height: 1.2;
+}
+p {
+	line-height: 1.6;
 }
 a {
 	text-decoration: none;
+}
+
+
+.default-btn {
+	display: inline-block;
+	padding: 15px 30px;
+	background-color: @gray-dark;
+	color: @white;
+	text-transform: uppercase;
+	font-size: 1.4rem;
+	font-weight: 600;
+	transition: background-color 300ms ease;
+	
+	&:hover {
+		background-color: lighten(@gray-dark, 15%);
+	}
+	
+	&.yellow {
+		background-color: @yellow;
+		
+		&:hover {
+			background-color: lighten(@yellow, 15%);
+		}
+	}
+	&.small {
+		padding: 12px 24px;
+	}
 }

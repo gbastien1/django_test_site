@@ -3,7 +3,13 @@ from django.db import models
 
 class Category(models.Model):
 	name = models.CharField(max_length=300)
-
+	description = models.TextField(default="")
+	slug = models.SlugField(unique=True)
+	
+	@models.permalink
+	def get_absolute_url(self):
+		return 'catalog:category', (self.slug)
+	
 	def __str__(self):
 		return self.name
 

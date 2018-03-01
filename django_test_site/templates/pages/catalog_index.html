@@ -1,5 +1,25 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<p>catalogue</p>
+<div class="catalog-index-ctn site-centerer">
+	<h1>Choose a category</h1>
+	<div class="categories-list">
+		<div class="categories-list-inner">
+			{% for category in object_list %}
+				<div class="category-item {% if forloop.counter == 1 %}selected{% endif %}" data-id="{{forloop.counter}}">
+					<img src="/static/img/categories/{{category.slug}}.png" alt="{{category.name}}" />
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+	<div class="category-descriptions-ctn">
+		{% for category in object_list %}
+			<div class="category-description {% if forloop.counter == 1 %}selected{% endif %}" data-id="{{forloop.counter}}">
+				<h2 class="category-title">{{category.name}}</h2>
+				<p class="description">{{category.description}}</p>
+				<a href="{% url 'catalog:category-detail' slug=category.slug %}" class="default-btn">View products</a>
+			</div>
+		{% endfor %}
+	</div>
+</div>
 {% endblock %}

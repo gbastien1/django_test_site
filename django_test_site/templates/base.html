@@ -15,7 +15,6 @@
             <link href="{% static 'less/style.less' %}" media="all" rel="stylesheet" type="text/less"/>
         {% endcompress %}
     {% endif %}
- 
 </head>
 <body>
     {% include "modules/header.html" %}
@@ -24,5 +23,7 @@
     {% endblock %}
 
     {% include "modules/footer.html" %}
+    
+    {% include "master-js.html" %}
 </body>
 </html>

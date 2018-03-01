@@ -1,0 +1,35 @@
+.catalog-index-ctn {
+	padding-top: 30px;
+	padding-bottom: 60px;
+	
+	.categories-list {
+		margin-bottom: 30px;
+		
+		img {
+			height: 100px;
+			width: auto;
+		}
+	}
+	.categories-list-inner {
+		.flexbox;
+		.flex-justify-space-around;
+	}
+	.category-item {
+		cursor: pointer;
+		opacity: 0.67;
+		transition: opacity 300ms ease;
+		
+		&:hover, &.selected {
+			opacity: 1;
+		}
+	}
+	.category-description {
+		width: 100%;
+		background-color: @gray-light;
+		padding: 20px 30px;
+		
+		&:not(.selected) {
+			display: none;
+		}
+	}
+}
