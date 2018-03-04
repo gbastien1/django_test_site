@@ -1,7 +1,14 @@
 {% extends 'base.html' %}
 
 {% block content %}
+ <div class="category-detail-content-ctn site-centerer">
+	<h1>{{url_slug}}</h1>
 	{% for product in object_list %}
-		<p>{{product.name}}</p>
+		<div class="product-list-item">
+			<img src="/static/img/products/{{product.slug}}.jpg" alt="{{product.name}}" />
+			<p class="product-name">{{product.name}}</p>
+			<a class="default-btn yellow" href="{% url 'catalog:product-detail' category=url_slug slug=product.slug %}">View</a>
+		</div>
 	{% endfor %}
+</div>
 {% endblock %}
